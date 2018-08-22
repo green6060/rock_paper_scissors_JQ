@@ -23,6 +23,10 @@ justify-content: space-evenly;
   flex-grow: 1;
 }
 
+#messages {
+  flex-grow: 1;
+}
+
 body {
   text-align: center
 }
