@@ -20,18 +20,15 @@ $(document).ready( function() {
 
   function calcRock (){
     var rockWinAverage = (rockWinCount / totalGameCount) * 100;
-
-    return rockWinAverage.toFixed(2);
+    return rockWinAverage.toFixed(2).toString();
   }
   function calcPaper (){
     var paperWinAverage = (paperWinCount / totalGameCount) * 100;
-
-    return paperWinAverage.toFixed(2);
+    return paperWinAverage.toFixed(2).toString();
   }
   function calcScissors (){
     var scissorsWinAverage = (scissorsWinCount / totalGameCount) * 100;
-
-    return scissorsWinAverage.toFixed(2);
+    return scissorsWinAverage.toFixed(2).toString();
   }
   
 
@@ -63,7 +60,9 @@ $(document).ready( function() {
       $( "#drawCount" ).replaceWith( "<h3 id='drawCount'>Draws: " + drawCount + "</h3>");
       $( "#result" ).replaceWith( "<h3 id='result'>Result: It was a draw!</h3>");
       $( "#userChoice" ).replaceWith( "<h3 id='userChoice'>My Choice: Rock</h3>");
+      
       $( "#computerChoice").replaceWith("<h3 id='computerChoice'>Computer Choice: " + compRand + "</h3>");
+      
     
     } else if (compRand == 'Paper') {
 
@@ -79,7 +78,9 @@ $(document).ready( function() {
       $( "#result" ).replaceWith( "<h3 id='result'>Result: You loose!</h3>");
       $( "#userChoice" ).replaceWith( "<h3 id='userChoice'>My Choice: Rock</h3>");
       $( "#computerChoice").replaceWith("<h3 id='computerChoice'>Computer Choice: " + compRand + "</h3>");
+      
       $( "#percentPaper").replaceWith("<h3 id='percentPaper'>Paper: </h3>" + paperAvg + "%</h3>");
+      
     
     } else if (compRand == 'Scissors') {
 
@@ -93,7 +94,9 @@ $(document).ready( function() {
       $( "#result" ).replaceWith( "<h3 id='result'>Result: You win!</h3>");
       $( "#userChoice" ).replaceWith( "<h3 id='userChoice'>My Choice: Rock</h3>");
       $( "#computerChoice").replaceWith("<h3 id='computerChoice'>Computer Choice: " + compRand + "</h3>");
-      $( "#percentRock").replaceWith("<h3 id='percentRock'>Rock: </h3>" + rockAvg + "%</h3>")
+      
+      $( "#percentRock").replaceWith("<h3 id='percentRock'>Rock: </h3>" + rockAvg + "%</h3>");
+      
     
     } else {
       //some error
@@ -120,7 +123,9 @@ $(document).ready( function() {
       $( "#result" ).replaceWith( "<h3 id='result'>Result: You win!</h3>");
       $( "#userChoice" ).replaceWith( "<h3 id='userChoice'>My Choice: Paper</h3>");
       $( "#computerChoice").replaceWith("<h3 id='computerChoice'>Computer Choice: " + compRand + "</h3>");
-      $( "#percentPaper").replaceWith("<h3 id='percentRock'>Paper: </h3>" + paperAvg + "%</h3>")
+      
+      $( "#percentPaper").replaceWith("<h3 id='percentRock'>Paper: </h3>" + paperAvg + "%</h3>");
+      
 
     } else if (compRand == 'Paper') {
     
@@ -132,7 +137,9 @@ $(document).ready( function() {
       $( "#drawCount" ).replaceWith( "<h3 id='drawCount'>Draws: " + drawCount + "</h3>");
       $( "#result" ).replaceWith( "<h3 id='result'>Result: It was a draw!</h3>");
       $( "#userChoice" ).replaceWith( "<h3 id='userChoice'>My Choice: Paper</h3>");
+      
       $( "#computerChoice").replaceWith("<h3 id='computerChoice'>Computer Choice: " + compRand + "</h3>");
+      
 
     } else if (compRand == 'Scissors') {
     
@@ -148,7 +155,9 @@ $(document).ready( function() {
       $( "#result" ).replaceWith( "<h3 id='result'>Result: You loose!</h3>");
       $( "#userChoice" ).replaceWith( "<h3 id='userChoice'>My Choice: Paper</h3>");
       $( "#computerChoice").replaceWith("<h3 id='computerChoice'>Computer Choice: " + compRand + "</h3>");
+      
       $( "#percentScissors").replaceWith("<h3 id='percentScissors'>Scissors: </h3>" + scissorsAvg + "%</h3>");
+      
 
     } else {
       alert("error!")
@@ -171,7 +180,9 @@ $(document).ready( function() {
       $( "#result" ).replaceWith( "<h3 id='result'>Result: You loose!</h3>");
       $( "#userChoice" ).replaceWith( "<h3 id='userChoice'>My Choice: Scissors</h3>");
       $( "#computerChoice").replaceWith("<h3 id='computerChoice'>Computer Choice: " + compRand + "</h3>");
+      
       $( "#percentRock").replaceWith("<h3 id='percentRock'>Rock: </h3>" + rockAvg + "%</h3>")
+      
 
     } else if (compRand == 'Paper') {
     
@@ -184,7 +195,9 @@ $(document).ready( function() {
       $( "#result" ).replaceWith( "<h3 id='result'>Result: You win!</h3>");
       $( "#userChoice" ).replaceWith( "<h3 id='userChoice'>My Choice: Scissors</h3>");
       $( "#computerChoice").replaceWith("<h3 id='computerChoice'>Computer Choice: " + compRand + "</h3>");
+      
       $( "#percentScissors").replaceWith("<h3 id='percentScissors'>Scissors: </h3>" + scissorsAvg + "%</h3>");
+      
 
     } else if (compRand == 'Scissors') {
     
@@ -194,7 +207,9 @@ $(document).ready( function() {
       $( "#drawCount" ).replaceWith( "<h3 id='drawCount'>Draws: " + drawCount + "</h3>");
       $( "#result" ).replaceWith( "<h3 id='result'>Result: It was a draw!</h3>");
       $( "#userChoice" ).replaceWith( "<h3 id='userChoice'>My Choice: Scissors</h3>");
+      
       $( "#computerChoice").replaceWith("<h3 id='computerChoice'>Computer Choice: " + compRand + "</h3>");
+      
 
     } else {
       alert("error!")
